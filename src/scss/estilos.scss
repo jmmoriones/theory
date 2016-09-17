@@ -1,0 +1,82 @@
+$font-main: 'Raleway', sans-serif;
+$font-base: 16px;
+$title-article: #5385c1;
+
+body{
+	font-family: $font-main !important;
+	font-size: $font-base;
+}
+iframe, img{max-width: 100%;}
+.header{
+	background: url('../img/banner.jpg');
+	color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4em 0em 10em 0em;
+    text-align: center;
+    border-top: 5px solid $title-article;
+}
+.titleArticle, .Dignissim .subTitle{color: $title-article;}
+.logo{margin-top:10px; text-align:center;}
+.menu ul li a{color: #CCC;}
+.title-des{margin-top: 7em;}
+.articles .article{ border-right: 1px solid #dbdbdb;padding: 0px 2em;}
+.margin-article{margin: 3em 0em;}
+p.textArticle,.Dignissim .parrafo{color:#a6a3a0;margin: 2em 0px;}
+.boton{border: 0px; border-radius: 0px; background: $title-article; color: #FFF;}
+.equipo{
+	background: $title-article;
+    color: #FFF;
+    padding: 2em 0px;
+}
+.equipo .title{margin-bottom: 3em;}
+.equipo .user{border: 1px solid rgba(255, 255, 255, 0.25); padding: 2em 0px 4em 0px;}
+.banner {
+    position: relative;
+    height:400px;
+    width:100%;
+    overflow: hidden;
+}
+#videobcg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height:auto;
+    width:auto;
+    z-index: -100;
+}
+.Dignissim .title h1{font-weight: 100;color: #8ec1ff;}
+.Dignissim .title{margin: 4em 0;}
+.contacto{
+    margin: 1.5em 0px;
+    background: #5385c1;
+    padding: 2em 0px;
+}
+.contacto .item input, .contacto .item textarea{margin: .5em 0px; resize: none;}
+.contacto .item input, .contacto .item textarea{
+    background: #eaeaea;
+    border-radius: 0;
+    border: none;
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 4px;
+    text-decoration: none;
+    width: 100%;
+}
+.btn-contacto{background: #FFF;border-radius: 0px;padding: 5px 25px;}
+.title-contacto h2{margin: 0px;color: #FFF;margin-bottom: 1em;}
+.sub-contact{color: #FFF;margin: 2em 0px;}
+.redes-sociales a{font-size: 19px;margin: 0px 5px;color: rgba(83, 133, 193, 0.81);}
+.flex-nav{display: flex; justify-content: flex-end;}
+
+
+@media screen and (max-width: 500px){
+
+    .flex-nav{
+        justify-content: center;
+    }
+
+}

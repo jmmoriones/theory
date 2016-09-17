@@ -1,0 +1,131 @@
+mixin menu(url, name)
+	li(role="presentation") #[a(href=`${url}`) #{name}]
+mixin pic(name, ext)
+	img(src=`img/${name}.${ext}`)
+mixin picCircle(name, ext)
+	img(src=`img/${name}.${ext}`, class="img-circle")
+
+doctype html
+html(lang="es")
+	head
+		meta(charset="utf-8")
+		title= title
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet")
+		each css in files.CSS
+			link(rel="stylesheet", href=`../${css}`)
+	body
+		header.header
+			div.container
+				div.row
+					div.logo.col-md-2.col-lg-2.col-sm-12
+						p.logo-title Theory
+					nav.menu.col-md-4.col-lg-4.col-sm-12.pull-right
+						ul.nav.nav-pills.flex-nav
+							+menu('#', 'Home')
+							+menu('#', 'Generic')
+							+menu('#', 'Contact')
+				div.title-des
+					h1.title Welcome to Theory
+					h5.des Afree responsive HTML5 website template by TEMPLATED
+
+		section.articles
+			div.container
+				div.row.margin-article
+					article.article.col-md-4.col-lg-4.col-sm-12
+						h3.titleArticle Magna tempus sed amet aliquam veroeros
+						p.textArticle Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.
+						button.boton.btn.btn-default More
+
+					article.article.col-md-4.col-lg-4.col-sm-12
+						h3.titleArticle Interdum lorem pulvinar adipiscing vitae
+						p.textArticle Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.
+						button.boton.btn.btn-default More
+
+					article.article.col-md-4.col-lg-4.col-sm-12
+						h3.titleArticle Libero purus magna sapien sed ullamcorper
+						p.textArticle Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu.
+						button.boton.btn.btn-default More
+
+		section.equipo.text-center
+			div.container
+				div.row
+					div.title
+						h2 Equipo
+						p Semper suscipit posuere apede
+					article.user.col-md-2.col-md-offset-1.col-lg-2.col-lg-offset-1.col-sm-12
+						+picCircle('pic03', 'jpg')
+						h4.title-user Magna
+						p.text-user Cipdum dolor
+					article.user.col-md-2.col-md-offset-1.col-lg-2.col-lg-offset-1.col-sm-12
+						+picCircle('pic04', 'jpg')
+						h4.title-user Magna
+						p.text-user Cipdum dolor
+					article.user.col-md-2.col-md-offset-1.col-lg-2.col-lg-offset-1.col-sm-12
+						+picCircle('pic05', 'jpg')
+						h4.title-user Magna
+						p.text-user Cipdum dolor
+					article.user.col-md-2.col-md-offset-1.col-lg-2.col-lg-offset-1.col-sm-12
+						+picCircle('pic06', 'jpg')
+						h4.title-user Magna
+						p.text-user Cipdum dolor
+
+		section.banner
+			video#videobcg(preload='auto', autoplay='true', loop='loop', muted='muted', volume='0')
+				source(src='http://dfcb.github.io/BigVideo.js/vids/dock.mp4', type='video/mp4')
+				source(src='movie.webm', type='video/webm')
+
+		section.Dignissim
+			div.container
+				div.row 
+					div.title.text-center
+						h1 Nunc Dignissim
+						p Aliquam erat volutpat nam dui
+					div.col-md-6
+						+pic('pic01', 'jpg')
+						h3.subTitle Praesent placerat magna
+						p.parrafo Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor lorem ipsum.
+						button.btn.boton More
+					div.col-md-6
+						+pic('pic02', 'jpg')
+						h3.subTitle Praesent placerat magna
+						p.parrafo Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor lorem ipsum.
+						button.btn.boton More
+	
+		section.contacto
+			article.container
+				div.row
+					form.col-md-6.col-lg-6.col-sm-12
+						div.text-left.title-contacto
+							h2 Contacto
+						div.item
+							input(type="text", placeholder="Name")
+						div.item
+							input(type="text", placeholder="Email")
+						div.item
+							textarea(rows='4', cols='50', placeholder="Message")
+						div.item
+							button.btn-contacto.btn Send
+						p.sub-contact Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat, Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat, Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.
+					div.col-md-6.col-lg-6.col-sm-12
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255116.35113451583!2d-76.71849567649689!3d2.442687807492396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3002f053b32a71%3A0x273c7502c8ff204f!2sPopay%C3%A1n%2C+Cauca%2C+Colombia!5e0!3m2!1ses-419!2ses!4v1474076184833" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	
+		form.datos
+			div.container
+				div.row
+					hr
+					div.pull-left 
+						a(href="http://twitter.com/jmmoriones" target="_blank") JMMoriones Development
+					div.pull-right.redes-sociales
+						a(href="#")
+							i(class="fa fa-facebook" aria-hidden="true")
+						a(href="#")
+							i(class="fa fa-twitter" aria-hidden="true")
+						a(href="#")
+							i(class="fa fa-linkedin" aria-hidden="true")
+						a(href="#")
+							i(class="fa fa-vimeo" aria-hidden="true")
+						a(href="#")
+							i(class="fa fa-youtube-play" aria-hidden="true")
+	each js in files.JS
+		script(src=`../${js}`)
